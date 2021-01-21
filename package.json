@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-sakura",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "vuepress  plugin sakura",
   "main": "index.js",
   "keywords": [
@@ -10,6 +10,6 @@
   "author": "JabinPeng",
   "license": "MIT",
   "__npminstall_done": "Wed Jan 13 2021 21:00:17 GMT+0800 (GMT+08:00)",
-  "_from": "vuepress-plugin-sakura@1.0.1",
+  "_from": "vuepress-plugin-sakura@1.1.0",
   "_gitHub": "https://github.com/JabinPeng/vuepress-plugin-sakura"
 }

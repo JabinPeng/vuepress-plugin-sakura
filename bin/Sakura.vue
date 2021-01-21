@@ -5,12 +5,6 @@
 </template>
 
 <script>
-    const img = new Image();
-    if (!SAKURA_IMG.replace) {
-        img.src = require('./sakura.png'); //樱花效果图相对路径
-    } else {
-        img.src = SAKURA_IMG.httpUrl; //樱花效果图路径
-    }
     class Sakura {
         constructor (x, y, s, r, fn, that) {
             this.x = x;
@@ -21,6 +15,12 @@
             this.that = that
         }
         draw (cxt) {
+            const img = new Image();
+            if (!SAKURA_IMG.replace) {
+                img.src = require('./sakura.png'); //樱花效果图相对路径
+            } else {
+                img.src = SAKURA_IMG.httpUrl; //樱花效果图路径
+            }
             cxt.save();
             var xc = 40 * this.s / 4;
             cxt.translate(this.x, this.y);

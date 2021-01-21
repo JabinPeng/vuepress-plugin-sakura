@@ -21,6 +21,8 @@ or
 
 >cnpm install vuepress-plugin-sakura -D
 
+## 版本更新
+> 1.1.0 修复打包报错
 
 ```js
 // 只要把这个放进 config的plugins中就可以了 有木有很简单
