@@ -6,26 +6,21 @@
 
 <script>
     class Sakura {
-        constructor (x, y, s, r, fn, that) {
+        constructor (x, y, s, r, fn, that,img) {
             this.x = x;
             this.y = y;
             this.s = s;
             this.r = r;
             this.fn = fn;
-            this.that = that
+            this.that = that;
+            this.img = img;
         }
         draw (cxt) {
-            const img = new Image();
-            if (!SAKURA_IMG.replace) {
-                img.src = require('./sakura.png'); //樱花效果图相对路径
-            } else {
-                img.src = SAKURA_IMG.httpUrl; //樱花效果图路径
-            }
             cxt.save();
             var xc = 40 * this.s / 4;
             cxt.translate(this.x, this.y);
             cxt.rotate(this.r);
-            cxt.drawImage(img, 0, 0, 40 * this.s, 40 * this.s)
+            cxt.drawImage(this.img, 0, 0, 40 * this.s, 40 * this.s)
             cxt.restore();
         }
         update () {
@@ -54,7 +49,7 @@
     }
     class SakuraList {
         constructor () {
-            this.list = []
+            this.list = [];
         }
         push (sakura) {
             this.list.push(sakura);
@@ -144,6 +139,12 @@
                 this.$refs.canvas_sakura.height = window.innerHeight;
                 var cxt = this.$refs.canvas_sakura.getContext('2d');
                 var sakuraList = new SakuraList();
+                const img = new Image();
+                if (!SAKURA_IMG.replace) {
+                    img.src = require('./sakura.png'); //樱花效果图相对路径
+                } else {
+                    img.src = SAKURA_IMG.httpUrl; //樱花效果图路径
+                }
                 for(var i = 0; i < that.num; i++) {
                     let sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny, randomFnR;
                     randomX = this.getRandom('x');
@@ -157,7 +158,7 @@
                         x: randomFnx,
                         y: randomFny,
                         r: randomFnR
-                    }, this);
+                    }, this,img);
                     sakura.draw(cxt);
                     sakuraList.push(sakura);
                 }
