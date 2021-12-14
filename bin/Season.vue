@@ -153,7 +153,7 @@ export default {
                 season.autumn = SEASON_IMG.httpUrl.autumn?SEASON_IMG.httpUrl.autumn:season.autumn;
                 season.winter = SEASON_IMG.httpUrl.winter?SEASON_IMG.httpUrl.winter:season.winter;  
             }
-            switch (6) {
+            switch (month) {
                     case 3:
                     case 4:
                     case 5:
