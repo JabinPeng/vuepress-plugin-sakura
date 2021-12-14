@@ -148,10 +148,10 @@ export default {
             }
             const month = new Date().getMonth() + 1;
             if (SEASON_IMG.replace) {
-                season.spring = SEASON_IMG.httpUrl.spring?SEASON_IMG.httpUrl.spring:season.spring;
-                season.summer = SEASON_IMG.httpUrl.summer?SEASON_IMG.httpUrl.summer:season.summer;
-                season.autumn = SEASON_IMG.httpUrl.autumn?SEASON_IMG.httpUrl.autumn:season.autumn;
-                season.winter = SEASON_IMG.httpUrl.winter?SEASON_IMG.httpUrl.winter:season.winter;  
+                season.spring = SEASON_IMG.httpUrl.spring||season.spring;
+                season.summer = SEASON_IMG.httpUrl.summer||season.summer;
+                season.autumn = SEASON_IMG.httpUrl.autumn||season.autumn;
+                season.winter = SEASON_IMG.httpUrl.winter||season.winter;  
             }
             switch (month) {
                     case 3:
