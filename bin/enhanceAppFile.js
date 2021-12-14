@@ -1,6 +1,6 @@
-import Sakura from "./Sakura.vue";
+import Season from "./Season.vue";
 export default ({
   Vue
 }) => {
-  Vue.component(Sakura.name, Sakura);
+  Vue.component(Season.name, Season);
 };
