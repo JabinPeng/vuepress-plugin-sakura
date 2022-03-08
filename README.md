@@ -1,3 +1,10 @@
+<!--
+ * @Author: Jabin
+ * @Date: 2022-03-08 21:16:42
+ * @LastEditors: Jabin
+ * @LastEditTime: 2022-03-08 21:35:40
+ * @Descripttion: 
+-->
 ## 💌 vuepress-plugin-sakura
 
 > 项目地址：[http://www.zpzpup.com/blog]
@@ -23,6 +30,8 @@ or
 
 ## 版本更新
 > 1.1.0 修复打包报错
+> 1.2.0 更改图片逻辑 避免重复请求 感谢[hahaxiaowai](https://github.com/hahaxiaowai)的pr
+
 
 ```js
 // 只要把这个放进 config的plugins中就可以了 有木有很简单
